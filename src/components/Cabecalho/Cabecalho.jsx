@@ -32,6 +32,7 @@ export default function Cabecalho() {
             <li><Link className='nav-item' href="/produtos/sapato">SAPATO</Link></li>
             <li><Link className='nav-item' href="/produtos/bone">BONE</Link></li>
             <li><Link className='nav-item' href="/tabela/queijo">QUEIJOS</Link></li>
+            <li><Link className='nav-item' href="/usuario/Userid">Usuario</Link></li>
             <li><Link className='nav-item' onClick={handleLogout} href="/"><Image className='img-login' src={Sair} alt='Icone para sair do site, formato de porta abrindo'/></Link></li>
           </ul>
           <div>

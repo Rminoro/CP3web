@@ -1,4 +1,4 @@
-// use-client/UserTable.js
+// // use-client/UserTable.js
 "use client";
 import { useEffect, useState } from "react";
 
@@ -6,9 +6,9 @@ export default function UserTable() {
   const [users, setUsers] = useState([]);
   const [inputId, setInputId] = useState('');
 
-  const fetchData = async () => {
+  const fetchData = async (id) => {
     try {
-      const response = await fetch(`http://localhost:3000/api/base/users/[id]`);
+      const response = await fetch(`http://localhost:3000/api/base/users/${id}`);
 
       if (!response.ok) {
         throw new Error(`Erro HTTP! Status: ${response.status}`);
@@ -38,7 +38,7 @@ export default function UserTable() {
   };
 
   const handleFetchData = () => {
-    fetchData();
+    fetchData(inputId);
   };
 
   return (
@@ -54,34 +54,36 @@ export default function UserTable() {
         />
         <button onClick={handleFetchData}>Buscar Usuário</button>
       </div>
-
-      <table>
-        <thead>
-          <tr>
-            <th>Id</th>
-            <th>Nome</th>
-            <th>Email</th>
-            <th>Senha</th>
-            <th>Telefone</th>
-          </tr>
-        </thead>
-        <tbody>
-          {users.map((user, index) => (
-            <tr key={index}>
-              <td>{user.id}</td>
-              <td>{user.nome}</td>
-              <td>{user.email}</td>
-              <td>{user.senha}</td>
-              <td>{user.telefone}</td>
+      
+      <div>
+        <table>
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Nome</th>
+              <th>Email</th>
+              <th>Senha</th>
+              <th>Telefone</th>
             </tr>
-          ))}
-        </tbody>
-        <tfoot>
-          <tr>
-            <td colSpan="5">Total de Usuários: {users.length}</td>
-          </tr>
-        </tfoot>
-      </table>
+          </thead>
+          <tbody>
+            {users.map((user, index) => (
+              <tr key={index}>
+                <td>{user.id}</td>
+                <td>{user.nome}</td>
+                <td>{user.email}</td>
+                <td>{user.senha}</td>
+                <td>{user.telefone}</td>
+              </tr>
+            ))}
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colSpan="5">Total de Usuários: {users.length}</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
     </div>
   );
 }
