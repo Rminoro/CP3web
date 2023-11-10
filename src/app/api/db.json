@@ -1,0 +1,8 @@
+{
+    "queijos": [
+      {"id": 1, "nome": "Queijo Minas", "preco": 20.0, "peso": 1.0, "tipo": "Minas"},
+      {"id": 2, "nome": "Queijo Prato", "preco": 25.0, "peso": 1.0, "tipo": "Prato"},
+      {"id": 3, "nome": "Queijo Mussarela", "preco": 30.0, "peso": 1.0, "tipo": "Mussarela"}
+   
+    ]
+  }

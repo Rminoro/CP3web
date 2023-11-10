@@ -1,0 +1,69 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.nav-login-off{
+    width: 100vw;
+    background-color: #000000;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+    
+}
+
+.nav-login-on{
+    width: 100vw;
+    background-color: #000000;
+    height: 10vh;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+ul {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.nav-item{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: lighter;
+}
+
+.nav-item:hover{
+    font-size: 28px;
+    font-weight: bold;
+}
+
+
+.btn-login{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 28px;
+}
+
+.img-login{
+    float: right;
+    margin: 30%;
+}
+
+
+.cabecalho-home-on{
+    width: 100%;
+    
+}
