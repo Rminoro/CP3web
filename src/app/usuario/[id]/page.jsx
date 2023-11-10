@@ -8,7 +8,9 @@ export default function UserTable() {
 
   const fetchData = async () => {
     try {
-      const response = await fetch(`http://localhost:3000/api/base/users/[id]`);
+    //   const response = await fetch(`http://localhost:3000/api/base/users/[id]`);
+    const response = await fetch(`http://localhost:3000/api/base/users/${inputId}`);
+
 
       if (!response.ok) {
         throw new Error(`Erro HTTP! Status: ${response.status}`);
