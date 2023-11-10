@@ -45,14 +45,14 @@ export default function UserTable() {
     <div>
       <h1>Lista de Usuários</h1>
       <div>
-        <label htmlFor="inputId">ID do Usuário: </label>
+        <label htmlFor="inputId">Usuarios </label>
         <input
           type="text"
           id="inputId"
           value={inputId}
           onChange={handleInputChange}
         />
-        <button onClick={handleFetchData}>Buscar Usuário</button>
+        <button onClick={handleFetchData}>Buscar Usuários</button>
       </div>
 
       <table>
@@ -62,17 +62,17 @@ export default function UserTable() {
             <th>Nome</th>
             <th>Email</th>
             <th>Senha</th>
-            <th>Telefone</th>
+            {/* <th>Telefone</th> */}
           </tr>
         </thead>
         <tbody>
           {users.map((user, index) => (
             <tr key={index}>
               <td>{user.id}</td>
-              <td>{user.nome}</td>
+              <td>{user.name}</td>
               <td>{user.email}</td>
               <td>{user.senha}</td>
-              <td>{user.telefone}</td>
+              {/* <td>{user.telefone}</td> */}
             </tr>
           ))}
         </tbody>

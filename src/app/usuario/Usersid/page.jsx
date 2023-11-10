@@ -172,7 +172,7 @@ export default function UserTable() {
             <th>Nome</th>
             <th>Email</th>
             <th>Senha</th>
-            <th>Telefone</th>
+            {/* <th>Telefone</th> */}
           </tr>
         </thead>
         <tbody>
@@ -182,7 +182,7 @@ export default function UserTable() {
               <td>{user.nome}</td>
               <td>{user.email}</td>
               <td>{user.senha}</td>
-              <td>{user.telefone}</td>
+              {/* <td>{user.telefone}</td> */}
             </tr>
           ))}
         </tbody>
